@@ -1,0 +1,23 @@
+.o_header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-style: solid;
+    border-color: rgba(173, 181, 189, 0.3);
+    border-width: 0.05em;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+.cushion {
+    padding: 15px;
+}
+
