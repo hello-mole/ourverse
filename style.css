@@ -59,13 +59,15 @@ body{
     overflow: hidden;
     height: 200px;
     background-position: center center;
-    background-size: 102%;
+    background-size: cover;
     border-radius: 1rem 1rem 0 0;
-    transition: all 0.3s;
+    background-repeat: no-repeat;
+
 }
 
 .pic:hover {
-    background-size: 108%;
+    background-size: 120%;
+    transition: all 3s;
 }
 
 .name {
