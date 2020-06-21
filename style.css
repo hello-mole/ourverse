@@ -62,12 +62,12 @@ body{
     background-size: cover;
     border-radius: 1rem 1rem 0 0;
     background-repeat: no-repeat;
-
+    transition-property: all;
+    transition-duration: 2s;
 }
 
 .pic:hover {
     background-size: 120%;
-    transition: all 3s;
 }
 
 .name {
@@ -75,4 +75,17 @@ body{
     height: 80px;
     font-weight: 900;
     font-size: 25px;
+}
+
+.rolling_banner {
+}
+
+.banner {
+    height: 150px;
+    width : 1136px;
+    background-color: purple;
+    border-radius: 0.3rem;
+}
+
+.arrow_left {
 }
