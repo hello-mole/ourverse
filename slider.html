@@ -20,12 +20,18 @@
             justify-content: center;
             align-items: center;
             color: white;
+            position: absolute;
+            top: 0;
+            z-index: 0;
         }
         .slider__item:nth-child(odd) {
             background-color: #8e44ad;
         }
         .slider__item:nth-child(even) {
             background-color: #3498db;
+        }
+        .showing {
+            z-index: 1;
         }
     </style>
 </head>
@@ -37,5 +43,19 @@
         <div class="slider__item"><h1>4</h1></div>
         <div class="slider__item"><h1>5</h1></div>
     </div>
+    <script>
+        const SHOWING_CLASS = "showing";
+        const firstSlide = document.querySelector(".slider__item:first-child");
+        function slide(){
+            const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+            console.log(currentSlide);
+            if(currentSlide){
+                
+            } else {
+                firstSlide.classList.add(SHOWING_CLASS);
+            }
+        };
+        slide();
+    </script>
 </body>
 </html>
