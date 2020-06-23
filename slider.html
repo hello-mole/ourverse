@@ -23,6 +23,9 @@
             position: absolute;
             top: 0;
             z-index: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            transform: scale(0.9%);
         }
         .slider__item:nth-child(odd) {
             background-color: #8e44ad;
@@ -32,6 +35,7 @@
         }
         .showing {
             z-index: 1;
+            transform: none;
         }
     </style>
 </head>
@@ -48,14 +52,20 @@
         const firstSlide = document.querySelector(".slider__item:first-child");
         function slide(){
             const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
-            console.log(currentSlide);
             if(currentSlide){
-                
+                currentSlide.classList.remove(SHOWING_CLASS);
+                const nextSlide = currentSlide.nextElementSibling;
+                if(nextSlide) {
+                    nextSlide.classList.add(SHOWING_CLASS);
+                } else {
+                    firstSlide.classList.add(SHOWING_CLASS);
+                }
             } else {
                 firstSlide.classList.add(SHOWING_CLASS);
             }
         };
         slide();
+        setInterval(slide, 2000);
     </script>
 </body>
 </html>
