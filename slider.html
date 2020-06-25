@@ -24,8 +24,8 @@
             top: 0;
             z-index: 0;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            transform: scale(0.9%);
+            transition: all 0.5s ease-in-out;
+            transform: scale(0.9);
         }
         .slider__item:nth-child(odd) {
             background-color: #8e44ad;
@@ -35,6 +35,7 @@
         }
         .showing {
             z-index: 1;
+            opacity: 1;
             transform: none;
         }
     </style>
