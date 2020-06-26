@@ -1,5 +1,10 @@
 const firstSlider = document.querySelector(".slider__item:first-child");
+const currentSlide = document.querySelector(".js-slider")
 const SHOWING_CLASS = "showing";
+
+function drawArrow(){
+    console.log(currentSlide);
+}
 
 function slide(){
     const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
@@ -17,7 +22,8 @@ function slide(){
 }
 
 slide();
-setInterval(slide, 6000);
+setInterval(slide, 3000);
+currentSlide.addEventListener("mouseover", drawArrow);
 
 // function drawBtn(){
     
